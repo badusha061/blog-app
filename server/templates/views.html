@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #f8f9fa;">
+    <div class="card shadow-lg" style="width: 25rem;">
+        <div class="card-header bg-dark text-white text-center">
+            <h4>Blog Post</h4>
+        </div>
+        <img src="{{blog.image.url}}" class="card-img-top" alt="Blog Image">
+        <div class="card-body">
+            <h5 class="card-title">{{blog.title}}</h5>
+            <p class="card-text">{{blog.content}}</p>
+            <p class="card-text"><small class="text-muted">Created at: {{blog.created_at}}</small></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock content %}
